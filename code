@@ -1,0 +1,93 @@
+print("Title of program: Y1 Science quiz")
+print()
+
+counter = 0
+score = 0
+total_num_of_qn = 3
+counter +=1
+tracker = 0
+while tracker !=1:
+  
+  print("Q"+str(counter)+") "+ "What should be filled in the blank?")
+  print("Word equation for photosynthesis:  CO2 + H2O —____→ glucose + oxygen")
+  answer = input("Your answer: ")
+  answer = answer.lower()
+  if answer == "light energy":
+    output = "That is correct!✓ Good job!"
+    score +=1
+    tracker = 1
+  elif answer == "light":
+    output = "Close! Which meaning of light are you referring to?"
+  elif answer == "energy":
+    output = "Incorrect. Your answer is too vague. What energy can plants absorb?"
+    score -= 1
+  else:
+    output = "Incorrect✘. Please check your answer!"
+    score -=1
+  
+  print()
+  print(output)
+  print()
+  print("Your current score: " + str(round((score/total_num_of_qn*100),1)) + "%"  )
+  print()
+  print()
+  
+
+
+counter +=1
+tracker = 0
+
+while tracker !=1:
+  
+  print("Q"+str(counter)+") "+ "Cell membranes are ____")
+
+  answer = input("Your answer: ")
+  answer = answer.lower()
+  if answer == "partially permeable":
+    output = "That is correct!✓ Good job!"
+    tracker =1
+    score +=1
+  else:
+    output = "Incorrect✘. Please check your answer!"
+    score -=1
+  print()
+  print(output)
+  print()
+  print("Your current score: " + str(round((score/total_num_of_qn*100),1)) + "%"  )
+  print()
+  print()
+  
+  
+
+counter +=1
+tracker = 0
+
+while tracker !=1:
+  
+  print("Q"+str(counter)+") "+ "What is the name, group and period of element 19? You can refer to the periodic table.")
+  print("Answer in this format: name, group, period")
+  answer = input("Your answer: ")
+  answer = answer.lower()
+  if answer == "potassium, 1, 4":
+    output = "That is correct!✓ Good job!"
+    tracker =1
+    score +=1
+  else:
+    output = "Incorrect✘. Please check your answer!"
+
+  
+
+  print()
+  print(output.lower())
+  print()
+  print("Your current score: " + str(round((score/total_num_of_qn*100),1)) + "%"  )
+  print()
+  print()
+
+if score == 3:
+  print("Well done! You scored 100% 🥳")
+if score == 2:
+  print("Not bad. Try harder next time! 👏😃")
+if score <= 1:
+  print("Unfortunately, you failed this quiz. Revise your science and try again!🙂")
+print("End of quiz!")
